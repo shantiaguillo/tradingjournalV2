@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Trading Journal</title>
+
+<link rel="icon" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+<text y='.9em' font-size='90'>💹</text>
+</svg>">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Trading Journal 🚀</h1>
+
+<div class="theme-btn">
+<button id="darkModeBtn">🌙 Dark Mode</button>
+</div>
+
+<form id="tradeForm">
+
+<label>Símbolo
+<input type="text" id="simbolo" required>
+</label>
+
+<label>Fecha Apertura
+<input type="date" id="fechaApertura" required>
+</label>
+
+<label>Fecha Cierre
+<input type="date" id="fechaCierre" required>
+</label>
+
+<label>Hora Apertura
+<input type="time" id="horaApertura" required>
+</label>
+
+<label>Hora Cierre
+<input type="time" id="horaCierre" required>
+</label>
+
+<label>Sesión
+<select id="sesion" required>
+<option value="">Seleccionar</option>
+<option>NY</option>
+<option>Londres</option>
+<option>Asia</option>
+</select>
+</label>
+
+<label>Dirección
+<select id="direccion" required>
+<option value="">Seleccionar</option>
+<option>Long</option>
+<option>Short</option>
+</select>
+</label>
+
+<label>Volumen
+<input type="number" id="volumen" step="0.01" required>
+</label>
+
+<label>Margen
+<input type="number" id="margen" step="0.01" required>
+</label>
+
+<label>Precio Apertura
+<input type="number" id="precioApertura" step="0.0001" required>
+</label>
+
+<label>Precio Cierre
+<input type="number" id="precioCierre" step="0.0001" required>
+</label>
+
+<label>Stop Loss
+<input type="number" id="sl" step="0.0001" required>
+</label>
+
+<label>Take Profit
+<input type="number" id="tp" step="0.0001" required>
+</label>
+
+<label>Resultado
+<select id="resultado" required>
+<option value="">Seleccionar</option>
+<option>Win</option>
+<option>Loss</option>
+<option>BE</option>
+</select>
+</label>
+
+<label>Beneficio / Pérdida
+<input type="number" id="beneficio" step="0.01" required>
+</label>
+
+<button type="submit" class="fullbtn">Agregar Trade</button>
+
+</form>
+
+<button id="downloadPdfBtn" class="fullbtn">Descargar Registro PDF</button>
+
+<h2>Historial de Trades</h2>
+
+<table id="tradeTable">
+
+<thead>
+<tr>
+<th>Símbolo</th>
+<th>F. Apertura</th>
+<th>F. Cierre</th>
+<th>H. Apertura</th>
+<th>H. Cierre</th>
+<th>Sesión</th>
+<th>Dirección</th>
+<th>Volumen</th>
+<th>Margen</th>
+<th>P. Apertura</th>
+<th>P. Cierre</th>
+<th>SL</th>
+<th>TP</th>
+<th>Resultado</th>
+<th>P/L</th>
+<th>Acciones</th>
+</tr>
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.29/jspdf.plugin.autotable.min.js"></script>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
