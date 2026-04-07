@@ -196,7 +196,7 @@ t.beneficio
 doc.text("Trading Journal",14,15)
 
 doc.autoTable({
-head:[['Símbolo','F.Apertura','F.Cierre','H.Apertura','H.Cierre','Sesión','Dirección','Volumen','Margen','P.Apertura','P.Cierre','SL','TP','Resultado','P/L']],
+head:[['Simb','F.Open','F.Close','H.Open','H.Close','Sesión','Dir','Vol','Margen','P.Open','P.Close','SL','TP','Result','P/L']],
 body:rows,
 startY:20
 })
